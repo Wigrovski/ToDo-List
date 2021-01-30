@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0ff;
+    font-family: Arial;
+  }
+
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 500px;
+    background-color: #fafafa;
+    padding: 0px;
+    box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+    margin: 6rem 0;
+    border-radius: 0.75rem;
+  }
+  
+  #footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    align-self: flex-start;
+    text-transform: uppercase;
+    box-shadow: 0 -10px 10px 0 rgba(1, 1, 1, 0.05);
+  }
+  #footer #taskAdd {
+    transition: all 0.3s ease-in-out;
+    width: 3rem;
+    height: 3rem;
+    background: #3b44fb;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: 0.75rem;
+    border: 0;
+    outline: 0;
+    will-change: transform;
+  }
+  #footer #taskAdd:hover {
+    background: #050fe5;
+    transform: scale(0.95);
+  }
+  #footer #taskAdd:active {
+     transform: scale(0.9);
+  }
+  #footer input#taskInput {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    background: transparent;
+    width: calc(100% - 3rem - 5px);
+    border: none;
+  }
+  #footer input#taskInput:focus {
+    outline: 0;
+    border-color: white;
+    color: #0d0d0d;
+  }
+  
+  #tasks {
+    padding: 1.5rem 2rem;
+  }
+  #tasks #tasksList {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  #tasks #tasksList li {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+    border-radius: 0.75rem;
+    color: #0d0d0d;
+    padding: 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    animation: fadeIn .5s linear;
+    background-color: #fff;
+    margin-bottom: 5px;
+    position: relative;
+    border-right: 0px solid lightgray;
+    letter-spacing: -.015rem;
+    will-change: transform;
+  }
+  #tasks #tasksList li:hover {
+    border-right: 55px solid red;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+    z-index: 20;
+    box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.2);
+  }
+  #tasks #tasksList li:hover .delete {
+    right: -37px;
+    color: white;
+  }
+  #tasks #tasksList li .delete {
+    transition: all 0.30s ease-in-out;
+    position: absolute;
+    color: transparent;
+    background: none;
+    border: none;
+    outline: 0;
+    line-height: .85rem;
+    font-size: 1rem;
+  }
+  #tasks #tasksList li .delete:hover {
+    opacity: .75;
+  }
+  #tasks #notification {
+    padding-top: 1rem;
+    text-align: center;
+    color: gray;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      margin-top: -50px;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-top: -50px;
+    }
+  }
